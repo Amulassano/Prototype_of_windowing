@@ -180,7 +180,7 @@ void windowing(int e, int ts){
 
     allocaBuffer();
 
-    if (ts>=t0)
+    if (ts>=tprev)
         x->head = scope(ts);
 
     addToBuffer(e,ts);
