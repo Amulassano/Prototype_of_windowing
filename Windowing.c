@@ -196,8 +196,8 @@ void windowing(int e, int ts){
                     compute(h->nc, cont);
 
                 }
-                h = h->next;
             }
+            h = h->next;            
         }
         h=x->head;
         for (int i=0;i<l;i++){
