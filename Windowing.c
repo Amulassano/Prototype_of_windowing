@@ -100,7 +100,7 @@ link scope(int ts){
         link l=p;
         while (l->next!=NULL)
             l=l->next;
-        if (l->w.c<ts) {
+        if (l->w.c<=ts) {
             o = l->w.c;
             do {
                 printf("Computing window [ %d , %d ] if absent\n", o, o + width);
