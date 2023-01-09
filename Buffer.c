@@ -27,6 +27,6 @@ static void contentInsert(int e,int ts, link h){ //inserisce il content: conosco
 void addToBuffer(int e, int ts){ //aggiunge al Buffer
     link p = x->head;
     for (int i=0;i<x->n;i++,p=p->next)
-        if (p->w.o<=ts && ts<=p->w.c) //cerco le finestre in cui il timestamp sia all'interno
+        if (p->w.o<=ts && ts<p->w.c) //cerco le finestre in cui il timestamp sia all'interno
             contentInsert(e,ts,p);
 }
