@@ -47,7 +47,7 @@ link scope(int ts){ //funzione scope
         printf("Calculating the Windows to Open. First one opens at [ %d ] and closes at [ %d ]\n", o, c);
 
         do { //ciclo che calcola, dalla prima finestra, tutte le finestre fino al mio timestamp attuale
-            printf("Computing window [ %d , %d ] if absent\n", o, o + width);
+            printf("Computing window [ %d , %d ) if absent\n", o, o + width);
             x->n++;
             p = listInsTail(p, NULL, o, o + width);
             o += slide;
@@ -61,7 +61,7 @@ link scope(int ts){ //funzione scope
         if (l->w.c<=ts) {
             o = l->w.c;
             do {
-                printf("Computing window [ %d , %d ] if absent\n", o, o + width);
+                printf("Computing window [ %d , %d ) if absent\n", o, o + width);
                 x->n++;
                 l = listInsTail(l, NULL, o, o + width);
                 o += slide;
